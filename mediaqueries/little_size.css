@@ -1,0 +1,29 @@
+.ctn-1{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.presentation{
+    width: 75vw;
+    margin-bottom: 80px;
+}
+
+.menu{
+    position: static;
+    width: 25vw;
+}
+
+.opa{
+    opacity: 0.7;
+}
+
+nav{
+    display: none;
+}
+
+.list-menu{
+    transform: translateY(0px);
+    opacity: 1;
+    animation: anim1 ease 1s;
+}
+

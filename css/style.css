@@ -1,0 +1,402 @@
+@keyframes anim1{
+    0%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@font-face{
+    font-family: "Blinkets";
+    src: url("../fonts/blinkets/Blinkets.otf");
+}
+
+/* STYLE GENERAL */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    font-family: "Rubik", sans-serif;
+    background-color: #f5f6fa;
+}
+
+h1{
+    margin-top: 20px;
+    color: #2d3436;
+    font-weight: 700;
+    font-size: 1.7em;
+}
+
+h2{
+    font-weight: 500;
+    color: #2d3436;
+    font-size: 1.1em;
+    margin-top: 14px;
+}
+
+i{
+    color: #2d3436;
+    font-size: 1.4em;
+    margin: 20px 10px 0px 10px;
+    cursor: pointer;
+}
+
+a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+    font-size: 1.25em;
+    text-align: center;
+    margin-top: 60px;
+    color: #f5f6fa;
+}
+
+p{
+    line-height: 1.8em;
+    color: rgba(0,0,0,0.7);
+}
+
+button{
+    background-color: #ff6348;
+    width: 160px;
+    height: 45px;
+    border-radius: 40px;
+    margin-top: 35px;
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    font-family: "Rubik",sans-serif;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    transition: all 0.2s ease;
+    background-color: #f5f6fa;
+    color: #ff6348;
+    border: 2px solid;
+}
+
+.insta:hover,.dribbble:hover,.twitter:hover,.github:hover,.linkedin:hover{
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+}
+.insta:hover{
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(165deg, rgba(0,0,0,1) 0%, rgba(64,93,230,1) 0%, rgba(88,81,219,1) 5%, rgba(131,58,180,1) 13%, rgba(193,53,132,1) 23%, rgba(225,48,108,1) 36%, rgba(253,29,29,1) 49%, rgba(245,96,64,1) 63%, rgba(247,119,55,1) 76%, rgba(252,175,69,1) 88%, rgba(255,220,128,1) 100%, rgba(255,220,128,1) 100%);
+    background: -webkit-linear-gradient(165deg, rgba(0,0,0,1) 0%, rgba(64,93,230,1) 0%, rgba(88,81,219,1) 5%, rgba(131,58,180,1) 13%, rgba(193,53,132,1) 23%, rgba(225,48,108,1) 36%, rgba(253,29,29,1) 49%, rgba(245,96,64,1) 63%, rgba(247,119,55,1) 76%, rgba(252,175,69,1) 88%, rgba(255,220,128,1) 100%, rgba(255,220,128,1) 100%);
+    background: linear-gradient(165deg, rgba(0,0,0,1) 0%, rgba(64,93,230,1) 0%, rgba(88,81,219,1) 5%, rgba(131,58,180,1) 13%, rgba(193,53,132,1) 23%, rgba(225,48,108,1) 36%, rgba(253,29,29,1) 49%, rgba(245,96,64,1) 63%, rgba(247,119,55,1) 76%, rgba(252,175,69,1) 88%, rgba(255,220,128,1) 100%, rgba(255,220,128,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffdc80",GradientType=1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.dribbble:hover{
+    color: #ea4c89;
+}
+
+.twitter:hover{
+    color: #1DA1F2;
+}
+
+.github:hover{
+    color: #3E2C00;
+}
+
+.linkedin:hover{
+    color: #0e76a8;
+}
+
+.social{
+    margin-top: 5px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 25px;
+    width: 100%;
+    height: 90px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.ctn-1{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: anim1 ease-out 0.4s;
+}
+
+.img-me{
+    width: 125px;
+    height: 125px;
+}
+
+.js-change{
+  opacity: 0;
+}
+
+/* BURGER MENU */
+
+.burger-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #2d3436;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.44);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.44);
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.44);
+    transition-delay: 200ms;
+}
+
+.burger-menu-active{
+    background-color: #f5f6fa;
+    transition: all 0.2s linear;
+}
+
+.line-1,.line-2,.line-3{
+    border-radius: 10px;
+    display: block;
+    width: 45%;
+    height: 2px;
+    background-color: #f5f6fa;
+}
+
+.line-1{
+    transition: all 0.2s linear;
+}
+
+.line-1-active{
+    transform: rotate(45deg);
+    transition: all 0.6s linear;
+    background-color: #2d3436;
+}
+
+.line-2{
+    margin-top: 8px;
+    opacity: 1;
+}
+
+.line-2-active{
+    display: none;
+}
+
+.line-3{
+    margin-top: 8px;
+    transition: all 0.2s linear;
+}
+
+.line-3-active{
+    transform: rotate(-45deg);
+    margin-top: -1px;
+    transition: all 0.6s linear;
+    background-color: #2d3436;
+}
+
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #2d3436;
+    top: 100vh;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-active{
+    transition: all 1s ease;
+    transition-delay: 50ms;
+    top: 0vh;
+}
+
+.menu-inner{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.list-menu{
+    opacity: 0;
+    transform: translateY(120px);
+}
+
+.list-menu-active{
+    opacity: 1;
+    transition: all 0.6s ease;
+    transition-delay: 0.5s;
+    transform: translateY(0px);
+}
+
+/* ME PAGE */
+
+.ctn-me{
+    height: 100vh;
+}
+
+.title{
+    font-size: 2.2em;
+    color: #2d3436;
+    width: 85vw;
+    margin: auto;
+    position: relative;
+    top: 30px;
+}
+
+.ctn-inner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    animation: anim1 ease-out 0.4s;
+}
+
+.info{
+    width: 92%;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #FFF;
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.10);
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.10);
+    margin-bottom: 50vh;
+}
+
+.info button:hover{
+    background-color: white;
+}
+
+
+/* CONTACT PAGE */
+
+form{
+    animation: anim1 ease-out 0.4s;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="submit"]{
+    background-color: #ff6348;
+    width: 160px;
+    height: 45px;
+    border-radius: 40px;
+    margin-top: 35px;
+    color: #FFF;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    font-family: "Rubik",sans-serif;
+}
+
+input[type="submit"]:hover{
+    transition: all 0.2s ease;
+    background-color: #f5f6fa;
+    color: #ff6348;
+    border: 2px solid;
+}
+
+input[type="mail"]{
+    background-color: white;
+    width: 92%;
+    height: 45px;
+    border-radius: 20px;
+    margin-top: 35px;   
+    color: #ff6348;
+    font-weight: 700;
+    border: none;
+    padding: 25px;
+    font-size: 1.1em;
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.02);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.02);
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.02);
+}
+
+input[type="mail"]::placeholder{ 
+    color: rgba(45, 52, 54, 1);
+    -webkit-opacity: 0.8;
+    font-size: 1em;
+    font-family: "Rubik",sans-serif;
+    font-weight: 500;
+}
+
+textarea{
+    background-color: white;
+    width: 92%;
+    height: 180px;
+    border-radius: 20px;
+    margin-top: 35px;
+    color: #2d3436;
+    font-family: "Rubik",sans-serif;
+    font-weight: 500;
+    border: none;
+    padding: 25px;
+    font-size: 1.1em;
+    line-height: 30px;
+    resize: none;
+    -webkit-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.02);
+    -moz-box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.02);
+    box-shadow: 10px 10px 47px 0px rgba(0,0,0,0.02);
+}
+
+textarea::placeholder{ 
+    font-size: 1em;
+    font-family: "Rubik",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+textarea:focus{
+   outline: none;
+}
